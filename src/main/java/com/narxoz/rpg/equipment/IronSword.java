@@ -1,17 +1,6 @@
 package com.narxoz.rpg.equipment;
 
-/**
- * Example concrete weapon implementation - Medieval theme.
- *
- * This is provided as a reference to help you understand the structure.
- * Study this, then create other weapons and armor for different themes.
- *
- * Notice:
- * - This implements the Weapon interface
- * - It has specific attributes for this weapon type
- * - It belongs to the "Medieval" equipment family
- *
- * TODO: Create similar implementations for:
+/*
  * Weapons:
  * - WizardStaff (Magic theme)
  * - Longbow (Ranger theme)
@@ -25,37 +14,42 @@ package com.narxoz.rpg.equipment;
  */
 public class IronSword implements Weapon {
 
-    private int damage;
-    private String weaponType;
+    private final int damage;
+    private final String weaponType;
+    private final int manaBoost;
+    private final String range;
 
-    public IronSword() {
+
+    public IronSword(int manaBoost, String range) {
+        this.range = "Average";
+        this.manaBoost = 28;
         this.damage = 25;
         this.weaponType = "Sword";
     }
 
-    // TODO: Implement methods from Weapon interface
-    // Define those methods in the Weapon interface first!
-
-    // Example method structure:
+    @Override
     public int getDamage() {
         return damage;
     }
 
+    @Override
     public String getWeaponInfo() {
         return "Iron Sword (Medieval) - A sturdy blade forged from iron";
     }
 
-    public void displayInfo() {
-        System.out.println("Weapon: " + getWeaponInfo());
-        System.out.println("Damage: " + damage);
-        System.out.println("Type: " + weaponType);
+    @Override
+    public String getWeaponType() {
+        return weaponType;
     }
 
-    // TODO: Consider adding theme-specific properties
-    // For example, Medieval weapons might have:
-    // - Durability
-    // - Weight
-    // Magic weapons might have:
-    // - Mana boost
-    // - Spell power
+    @Override
+    public int getManaBoost() {
+        return manaBoost;
+    }
+
+    @Override
+    public String getRange() {
+        return range;
+    }
+
 }
