@@ -7,7 +7,7 @@ public class LeatherArmor implements Armor {
     private final int agilityBonus;
     private final int manaBoost;
 
-    public LeatherArmor(int manaBoost) {
+    public LeatherArmor() {
         this.manaBoost = 23;
         this.defense = 20;
         this.armorType = "Leather Armor";

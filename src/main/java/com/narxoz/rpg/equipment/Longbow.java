@@ -6,7 +6,7 @@ public class Longbow implements Weapon{
     private final String range;
     private final int manaBoost;
 
-    public Longbow(int manaBoost){
+    public Longbow(){
         this.manaBoost = 30;
         this.damage = 30;
         this.weaponType = "Bow";

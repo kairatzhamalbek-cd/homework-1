@@ -1,17 +1,6 @@
 package com.narxoz.rpg.equipment;
 
-/*
- * Weapons:
- * - WizardStaff (Magic theme)
- * - Longbow (Ranger theme)
- * - Other weapons you imagine...
- *
- * Armor:
- * - PlateArmor (Medieval theme)
- * - EnchantedRobes (Magic theme)
- * - LeatherArmor (Ranger theme)
- * - Other armor you imagine...
- */
+
 public class IronSword implements Weapon {
 
     private final int damage;
@@ -20,12 +9,14 @@ public class IronSword implements Weapon {
     private final String range;
 
 
-    public IronSword(int manaBoost, String range) {
+    public IronSword() {
         this.range = "Average";
         this.manaBoost = 28;
         this.damage = 25;
         this.weaponType = "Sword";
     }
+
+
 
     @Override
     public int getDamage() {
