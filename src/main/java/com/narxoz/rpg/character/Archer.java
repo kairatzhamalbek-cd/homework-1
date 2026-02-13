@@ -16,7 +16,6 @@ public class Archer implements Character {
 
     public Archer(String name) {
         this.name = name;
-        // Archer stats: medium/balanced
         this.health = 110;
         this.mana = 60;
         this.strength = 55;

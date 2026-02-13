@@ -4,7 +4,7 @@ import com.narxoz.rpg.equipment.LeatherArmor;
 import com.narxoz.rpg.equipment.Longbow;
 import com.narxoz.rpg.equipment.Weapon;
 
-public abstract class RangerEquipmentFactory implements EquipmentFactory {
+public class RangerEquipmentFactory implements EquipmentFactory {
     @Override
     public Weapon createWeapon(){
         return new Longbow();
