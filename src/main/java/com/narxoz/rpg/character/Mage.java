@@ -1,10 +1,9 @@
 package com.narxoz.rpg.character;
+
 import com.narxoz.rpg.equipment.Armor;
 import com.narxoz.rpg.equipment.Weapon;
 
-
-
-public class Warrior implements Character {
+public class Mage implements Character {
 
     private final String name;
     private final int health;
@@ -15,50 +14,48 @@ public class Warrior implements Character {
     private Weapon equippedWeapon;
     private Armor equippedArmor;
 
-
-
-
-    public Warrior(String name) {
+    public Mage(String name) {
         this.name = name;
-        this.health = 150;
-        this.mana = 30;
-        this.strength = 80;
-        this.intelligence = 20;
+        this.health = 70;
+        this.mana = 150;
+        this.strength = 20;
+        this.intelligence = 90;
     }
 
-
     @Override
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
     @Override
-    public int getHealth(){return health;}
+    public int getHealth() { return health; }
     @Override
-    public int getMana(){return mana;}
+    public int getMana() { return mana; }
     @Override
-    public int getStrength(){return strength;}
+    public int getStrength() { return strength; }
     @Override
-    public int getIntelligence(){return intelligence;}
-
+    public int getIntelligence() { return intelligence; }
+    @Override
     public void displayStats() {
-        System.out.println("=== " + name + " (Warrior) ===");
+        System.out.println("=== " + name + " (Mage) ===");
         System.out.println("Health: " + health);
         System.out.println("Mana: " + mana);
         System.out.println("Strength: " + strength);
         System.out.println("Intelligence: " + intelligence);
     }
+
     @Override
     public void useSpecialAbility() {
-        System.out.println(name + " uses BERSERKER RAGE! Strength temporarily increased!");
+        System.out.println(name + " uses ARCANE BLAST! Powerful magic damage unleashed!");
     }
+
     @Override
     public void equipWeapon(Weapon weapon) {
         this.equippedWeapon = weapon;
     }
+
     @Override
     public void equipArmor(Armor armor) {
         this.equippedArmor = armor;
     }
+
     @Override
     public void displayEquipment() {
         if (equippedWeapon != null) {
@@ -75,7 +72,4 @@ public class Warrior implements Character {
             System.out.println("Armor: (none)");
         }
     }
-
-
-
 }

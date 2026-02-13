@@ -1,10 +1,9 @@
 package com.narxoz.rpg.character;
+
 import com.narxoz.rpg.equipment.Armor;
 import com.narxoz.rpg.equipment.Weapon;
 
-
-
-public class Warrior implements Character {
+public class Archer implements Character {
 
     private final String name;
     private final int health;
@@ -15,41 +14,42 @@ public class Warrior implements Character {
     private Weapon equippedWeapon;
     private Armor equippedArmor;
 
-
-
-
-    public Warrior(String name) {
+    public Archer(String name) {
         this.name = name;
-        this.health = 150;
-        this.mana = 30;
-        this.strength = 80;
-        this.intelligence = 20;
+        // Archer stats: medium/balanced
+        this.health = 110;
+        this.mana = 60;
+        this.strength = 55;
+        this.intelligence = 45;
     }
 
+    @Override
+    public String getName() { return name; }
 
     @Override
-    public String getName() {
-        return name;
-    }
-    @Override
-    public int getHealth(){return health;}
-    @Override
-    public int getMana(){return mana;}
-    @Override
-    public int getStrength(){return strength;}
-    @Override
-    public int getIntelligence(){return intelligence;}
+    public int getHealth() { return health; }
 
+    @Override
+    public int getMana() { return mana; }
+
+    @Override
+    public int getStrength() { return strength; }
+
+    @Override
+    public int getIntelligence() { return intelligence; }
+
+    @Override
     public void displayStats() {
-        System.out.println("=== " + name + " (Warrior) ===");
+        System.out.println("=== " + name + " (Archer) ===");
         System.out.println("Health: " + health);
         System.out.println("Mana: " + mana);
         System.out.println("Strength: " + strength);
         System.out.println("Intelligence: " + intelligence);
     }
+
     @Override
     public void useSpecialAbility() {
-        System.out.println(name + " uses BERSERKER RAGE! Strength temporarily increased!");
+        System.out.println(name + " uses RAPID SHOT! Fires multiple arrows in quick succession!");
     }
     @Override
     public void equipWeapon(Weapon weapon) {
@@ -75,7 +75,4 @@ public class Warrior implements Character {
             System.out.println("Armor: (none)");
         }
     }
-
-
-
 }
